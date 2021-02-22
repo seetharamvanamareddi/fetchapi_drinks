@@ -16,7 +16,7 @@ function getdrinkList() {
   fetch(
     `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`
   )
-    .then((response) => response.json())
+    .then(response => response.json())
     .then((data) => {
       let html = "";
       if (data.drinks) {
@@ -61,7 +61,7 @@ function drinkRecipeModal(drink) {
   console.log(drink);
   drink = drink[0];
   let html = `
-        <h2 class = "recipe-title">${drink.strdrink}</h2>
+        <h2 class = "recipe-title">${drink.strDrink}</h2>
         <p class = "recipe-category">${drink.strCategory}</p>
         <div class = "recipe-instruct">
             <h3>Instructions:</h3>
